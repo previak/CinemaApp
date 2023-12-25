@@ -15,10 +15,14 @@ fun main() {
         when (choice) {
             "R" -> {
                 userLoginManager.mainRegister()
+                userLoginManager.mainLogin()
+                break
             }
             "L" -> {
-
+                userLoginManager.mainLogin()
+                break
             }
+            else -> println("Вы ввели неверную опцию. Выберите опцию R/L.")
         }
     }
 

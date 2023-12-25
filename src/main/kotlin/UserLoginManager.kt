@@ -51,17 +51,34 @@ class UserLoginManager(private val userEncoding: UserEncoding, private val users
 
     fun mainRegister() {
         println("Введите логин для регистрации: ")
-        val login = readln()
+        var username = readln()
+        while (users.find { it.username == username } != null) {
+            println("Пользователь с таким логином уже существует! Введите заново: ")
+            username = readln()
+        }
         println("Введите пароль для регистрации: ")
         val password = readln()
-        registerUser(login, password)
+        registerUser(username, password)
+        println("Вы успешно зарегистрировались.")
     }
 
     fun mainLogin() {
         println("Введите логин для входа: ")
-        val login = readln()
+        var username = readln()
+        while (users.find { it.username == username } == null) {
+            println("Пользователя с таким логином не существует. Введите заново: ")
+            username = readln()
+        }
         println("Введите пароль для входа: ")
-        val password = readln()
-        login(login, password)
+        var password = readln()
+        while (!login(username, password)) {
+            println("Введенный пароль неверный. Введите заново: ")
+            password = readln()
+        }
+        if (login(username, password)) {
+            println("Вы успешно зашли на свой аккаунт.")
+        } else {
+            println("Произошла не предвиденная ошибка. Перезагрузите программу.")
+        }
     }
 }
