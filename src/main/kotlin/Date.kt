@@ -1,4 +1,4 @@
-data class Date (val year: Int, val month: Int, val day: Int, val hour: Int, val minute: Int) : Comparable<Date> {
+data class Date(val year: Int, val month: Int, val day: Int, val hour: Int, val minute: Int) : Comparable<Date> {
 
     override fun compareTo(other: Date): Int {
         if (year != other.year) {

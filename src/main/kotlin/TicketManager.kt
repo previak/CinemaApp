@@ -59,7 +59,7 @@ class TicketManager(private val scheduleManager: ScheduleManager) {
         val (row, column) = getRowAndColumn()
 
         if (checkTicketWasBought(number, row, column)) {
-            scheduleComponent.tickets.remove(scheduleComponent.tickets.find { it.row == row && it.column == column})
+            scheduleComponent.tickets.remove(scheduleComponent.tickets.find { it.row == row && it.column == column })
             println("Билет был возвращен.")
         } else {
             println("Билет с таким местом еще не был продан.")
@@ -94,7 +94,7 @@ class TicketManager(private val scheduleManager: ScheduleManager) {
         val (row, column) = getRowAndColumn()
 
         if (checkTicketWasBought(number, row, column)) {
-            scheduleComponent.tickets.find { it.row == row && it.column == column}?.isUsed = true
+            scheduleComponent.tickets.find { it.row == row && it.column == column }?.isUsed = true
             println("Билет был отмечен как использованный.")
         } else {
             println("Билет с таким местом еще не был продан.")
@@ -170,7 +170,7 @@ class TicketManager(private val scheduleManager: ScheduleManager) {
         return foundTicket
     }
 
-    private fun getRowAndColumn() : Pair<Int, Int> {
+    private fun getRowAndColumn(): Pair<Int, Int> {
         val reader = Reader()
 
         println("Введите номер ряда (1-8): ")

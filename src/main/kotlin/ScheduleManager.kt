@@ -36,10 +36,12 @@ class ScheduleManager(private val scheduleFile: File, private val movieManager: 
                     addScheduleComponent()
                     return
                 }
+
                 "D" -> {
                     removeScheduleComponent()
                     return
                 }
+
                 else -> println("Вы ввели неверную опцию. Выберите (A/D).")
             }
             println()
@@ -136,7 +138,7 @@ class ScheduleManager(private val scheduleFile: File, private val movieManager: 
         return schedule.find { it.number == number }
     }
 
-    fun getScheduleNumber() : Int {
+    fun getScheduleNumber(): Int {
         val reader = Reader()
 
         var number = reader.readValidInt()

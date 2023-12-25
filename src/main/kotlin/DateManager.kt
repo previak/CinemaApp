@@ -10,7 +10,7 @@ const val MAX_MINUTE = 59
 
 class DateManager {
 
-    fun createDate() : Date {
+    fun createDate(): Date {
         val reader = Reader()
 
         println("Введите год показа фильма: ")

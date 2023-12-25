@@ -18,10 +18,12 @@ fun main() {
                 userLoginManager.mainLogin()
                 break
             }
+
             "L" -> {
                 userLoginManager.mainLogin()
                 break
             }
+
             else -> println("Вы ввели неверную опцию. Выберите опцию R/L.")
         }
     }
@@ -59,9 +61,10 @@ fun main() {
             6 -> ticketManager.checkTicket()
             7 -> ticketManager.checkFullnessOfTheHall()
             8 -> {
-                println("Вы успешно вышли")
+                println("Вы успешно вышли.")
                 return
             }
+
             else -> println("Вы ввели неверное число. Выберите опцию 1-8.")
         }
         println()

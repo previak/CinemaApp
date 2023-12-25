@@ -87,6 +87,7 @@ class MovieManager(private val moviesFile: File) {
                     println("Изменения были успешно применены.")
                     return
                 }
+
                 "D" -> {
                     println("Введите новую длительность фильма: ")
                     val newDuration = reader.readValidInt()
@@ -95,6 +96,7 @@ class MovieManager(private val moviesFile: File) {
                     println("Изменения были успешно применены.")
                     return
                 }
+
                 else -> println("Вы ввели неверную опцию. Выберите (T/D).")
             }
             println()
