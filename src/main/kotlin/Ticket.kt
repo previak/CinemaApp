@@ -1,0 +1,1 @@
+data class Ticket(val row: Int, val column: Int, var isUsed: Boolean)

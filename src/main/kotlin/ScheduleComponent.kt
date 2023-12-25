@@ -1,0 +1,1 @@
+data class ScheduleComponent(var number: Int, val movie: Movie, val startDate: Date, val tickets: MutableList<Ticket>)
